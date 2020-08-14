@@ -10,4 +10,4 @@ Then run `ng serve` for a dev server and navigate to `http://localhost:4200/`.
 The app will automatically reload if you change any of the source files.
 
 ## Live version
-This app can also be found [HERE]() Thanks to the amazing 
+This app can also be found running [HERE](https://james-challenge.vercel.app/) Thanks to the amazing Vercel team.
