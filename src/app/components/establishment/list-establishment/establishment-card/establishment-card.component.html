@@ -1,0 +1,9 @@
+<mat-card class="establishment-card" fxLayout="row" [routerLink]="['establishment/'+establishment.id]">
+    <div>
+        <img class="establishment-card-image" [src]="establishment.picture"/>
+    </div>
+    <div class="establishment-info">
+        <p class="establishment-card-primary-text">{{establishment.name}} <span class="establishment-card-secondary-text">{{establishment.id}}</span></p>
+        <p class="establishment-card-secondary-text">{{establishment.address}}</p>
+    </div>
+</mat-card>

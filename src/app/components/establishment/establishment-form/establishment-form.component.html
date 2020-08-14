@@ -1,0 +1,75 @@
+<div class="establishment-form" fxLayout="row" fxLayoutAlign="center">
+    <div fxFlex="50">
+        <mat-card class="establishment-form-header">
+            <div fxLayout="column">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <button mat-icon-button [routerLink]="['/']">
+                        <mat-icon>keyboard_backspace</mat-icon>
+                    </button>
+
+                    <img class="establishment-form-image" [src]="establishment.picture"/>
+
+                    <div class="establishment-info">
+                        <p class="establishment-form-primary-text">{{oldEstablishmentName}} </p>
+                        <p class="establishment-form-secondary-text">{{establishment.id}}</p>
+                    </div>
+                </div>
+
+                <h2 class="info-label">Informções Básicas</h2>
+                <mat-divider [inset]="true"></mat-divider>
+
+                <div class="form">
+                    <div fxLayout="row">
+                        <mat-form-field fxFlex="33">
+                            <mat-label>Nome</mat-label>
+                            <input matInput [(ngModel)]="establishment.name" />
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex="33">
+                            <mat-label>Email</mat-label>
+                            <input matInput [(ngModel)]="establishment.email" />
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex="33">
+                            <mat-label>Telefone</mat-label>
+                            <input matInput [(ngModel)]="establishment.phone" />
+                        </mat-form-field>
+                    </div>
+
+                    <div fxLayout="row">
+                        <mat-form-field fxFlex="50">
+                            <mat-label>Endereço</mat-label>
+                            <input matInput [(ngModel)]="establishment.address" />
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex="50">
+                            <mat-label>URL da Imagem</mat-label>
+                            <input matInput [(ngModel)]="establishment.picture" />
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <h2 class="info-label">Localização</h2>
+                <mat-divider [inset]="true"></mat-divider>
+
+                <div class="form">
+                    <mat-form-field fxFlex="50">
+                        <mat-label>Latitude</mat-label>
+                        <input matInput [(ngModel)]="establishment.latitude" />
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="50">
+                        <mat-label>Longitude</mat-label>
+                        <input matInput [(ngModel)]="establishment.longitude" />
+                    </mat-form-field>
+                </div>
+
+                <div class="form-footer" fxLayout="row" fxLayoutAlign="end center">
+                    <button mat-raised-button color="primary" (click)="saveEstablishment()">
+                        Salvar
+                    </button>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

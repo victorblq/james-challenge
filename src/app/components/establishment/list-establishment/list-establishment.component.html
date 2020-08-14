@@ -1,0 +1,9 @@
+<div class="list-establishment" fxLayout="row" fxLayoutAlign="center">
+    <div fxFlex="50">
+        <app-establishment-card *ngFor="let establishment of establishments" [establishment]="establishment"></app-establishment-card>
+    </div>
+
+    <a mat-fab class="add-button" [routerLink]="['establishment/add']">
+        <mat-icon>add</mat-icon>
+    </a>
+</div>
