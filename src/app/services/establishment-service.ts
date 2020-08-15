@@ -2,7 +2,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Establishment} from '../models/establishment';
-import { v4 as uuid } from 'uuid';
+import {v4 as uuid} from 'uuid';
 
 @Injectable()
 export class EstablishmentService {
@@ -48,6 +48,11 @@ export class EstablishmentService {
         establishment.index = Math.max(...this.establishments.map((e) => e.index), 0) + 1;
 
         this.establishments.push(establishment);
+        localStorage.setItem('establishments', JSON.stringify(this.establishments));
+    }
+
+    public deleteEstablishment(establishment: Establishment): void{
+        this.establishments.splice(this.establishments.indexOf(establishment), 1);
         localStorage.setItem('establishments', JSON.stringify(this.establishments));
     }
 }

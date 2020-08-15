@@ -19,6 +19,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import {DeleteDialogComponent} from './components/dialogs/delete-dialog/delete-dialog.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
         HeaderComponent,
         ListEstablishmentComponent,
         EstablishmentCardComponent,
-        EstablishmentFormComponent
+        EstablishmentFormComponent,
+        DeleteDialogComponent
     ],
     imports: [
         AppRoutingModule,
@@ -40,6 +43,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
         BrowserAnimationsModule,
         MatButtonModule,
         MatCardModule,
+        MatDialogModule,
         MatDividerModule,
         MatFormFieldModule,
         MatIconModule,

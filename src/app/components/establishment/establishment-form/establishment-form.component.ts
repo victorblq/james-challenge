@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Establishment} from '../../../models/establishment';
 import {EstablishmentService} from '../../../services/establishment-service';
 import {ActivatedRoute, Router} from '@angular/router';

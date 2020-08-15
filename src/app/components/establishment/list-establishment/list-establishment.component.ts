@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {EstablishmentService} from '../../../services/establishment-service';
 import {Establishment} from '../../../models/establishment';
 
